@@ -1,0 +1,301 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/wickedbackground.png'); /* デフォルトの背景画像 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    font-family: "DotGothic16", sans-serif;
+}
+
+#top-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+#top-screen img {
+    height: 400px;
+    z-index: 1;
+    padding-top: 40px;
+}
+
+#heart-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.heart-icon {
+    position: absolute;
+    animation: floatUp 3s ease-out forwards;
+    opacity: 0.8;
+    z-index: 10;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(-50px) scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.animate-yura {
+    animation: yura 2s infinite ease-in-out;
+}
+
+@keyframes yura {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+#main-screen {
+    padding: 20px;
+    position: relative;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: aliceblue;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "DotGothic16", sans-serif;font-family: "DotGothic16", sans-serif;
+}
+
+button:hover {
+    background-color: rgb(199, 229, 255);
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: aliceblue;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    text-align: left;
+    padding-left: 10px;
+}
+
+#todo-list li input[type="checkbox"],
+#challenge-container li input[type="checkbox"] {
+    margin-right: 10px;  
+}
+
+
+#footer-momo-dai {
+    width: 50px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+#points-display {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.challenge-card {
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+    display: inline-block;
+    background-color: aliceblue;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.challenge-card:hover {
+    transform: scale(1.1);
+    background-color: rgb(199, 229, 255);
+}
+
+.message-bubble {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+#background-selector {
+    position: fixed;
+    top: 10px;
+    left: 10px; 
+    display: flex;
+    gap: 10px;
+}
+
+.background-option {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: border 0.3s ease;
+}
+
+.background-option:hover {
+    border-color: rgb(199, 229, 255);
+}
+
+footer {
+    background-color: aliceblue; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px; 
+}
+
+#footer-momo-dai-left {
+    width: 80px; 
+}
+
+#footer-momo-dai-right {
+    width: 80px;
+    padding-right: 15px;
+}
+
+#footer-message {
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    color: #333;
+}
+
+#weather-section {
+    margin-bottom: 50px;  
+}
+
+.delete-icon {
+    width: 20px; 
+    height: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#task-controls {
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+#task-input {
+    display: block;
+    margin: 20px auto;  
+    padding: 10px;
+    width: 80%;  
+    max-width: 400px; 
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid aliceblue;
+}
+
+.control-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: aliceblue;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.control-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.challenge-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: aliceblue;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: grey;
+}
+
+li.completed span {
+    text-decoration: line-through; /* チェックしたら線を引く */
+}
+
+.delete-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#challenge-buttons button img {
+    width: 24px;
+    height: 24px;
+}
+
+#weather-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+#weather-icon {
+    width: 50px;
+    height: 50px;
+   
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ももだいのやることリスト</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="top-screen">
+        <div id="momo-dai-animation">
+            <img src="./img/mdtop2.png" alt="ももとだい" id="momo-dai" class="animate-yura">
+            <div id="heart-container"></div> 
+        </div>
+        <h2>どんな1日になるかな？</h2>
+        <div id="button-container">
+            <button id="weather-btn">天気を見る</button>
+            <button id="todo-btn">リストを作る</button>
+        </div>
+    </div>
+
+    <div id="main-screen" style="display:none;">
+        <h2>今日やること</h2>
+        <ul id="todo-list"></ul>
+        <input type="text" id="task-input" name="task" placeholder="タスクを入力してね" style="display:none;">
+    <div id="task-controls">
+    <button id="add-task-btn" class="control-btn">＋</button>
+    <button id="delete-task-btn" class="control-btn">ー</button>
+    </div>
+
+        <h2>日替わりチャレンジ</h2>
+        <p id="challenge-container"></p>
+        <div id="challenge-buttons">
+            <button id="select-challenge-btn">＋</button>
+            <button id="delete-challenge-btn">ー</button>
+        </div>
+        
+        <div id="points-display">えらいポイント: <span id="points">0</span></div>
+    </div>
+
+        <div id="weather-section">
+            <h2>今日の天気</h2>
+            <p id="weather-message"></p> 
+            <p id="weather-custom-message"></p> 
+            <p id="weather-temp"></p> 
+            <img id="weather-icon" src="" alt="天気アイコン" />
+            <button id="get-weather-btn">天気を更新</button>
+        </div>
+        
+        <div id="background-selector">
+            <div class="background-option" data-bg="wickedbackground.png" style="background-image: url('./img/wickedbackground.png');"></div>
+            <div class="background-option" data-bg="wickedbackground2.png" style="background-image: url('./img/wickedbackground2.png');"></div>
+            <div class="background-option" data-bg="wickedbackground3.png" style="background-image: url('./img/wickedbackground3.png');"></div>
+        </div>
+
+    </div>
+
+    <footer>
+        <img src="./img/mgood3.png" alt="ももとだい左" id="footer-momo-dai-left">
+        <div id="footer-message"></div> 
+        <img src="./img/good3.png" alt="ももとだい右" id="footer-momo-dai-right">
+    </footer>
+
+    <div id="challenge-selection-screen" style="display:none;">
+        <h2>チャレンジを選んでね</h2>
+        <div id="challenge-list"></div>
+        <button id="back-to-main">戻る</button>
+    </div>
+    
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
